@@ -1,0 +1,31 @@
+amcl:
+  ros__parameters:
+    use_sim_time: false
+
+    min_particles: 500
+    max_particles: 2000
+
+    robot_model_type: "nav2_amcl::DifferentialMotionModel"
+    alpha1: 0.2
+    alpha2: 0.5
+    alpha3: 0.2
+    alpha4: 0.3
+    alpha5: 0.1
+
+    base_frame_id: "base_link"
+    odom_frame_id: "odom_combined"
+    global_frame_id: "map"
+
+    scan_topic: scan
+    laser_model_type: "likelihood_field"
+
+    update_min_d: 0.2
+    update_min_a: 0.5
+
+    set_initial_pose: true
+
+    initial_pose:
+      x: 0.0
+      y: 0.3
+      z: 0.0
+      yaw: 0.0
